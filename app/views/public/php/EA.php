@@ -22,6 +22,8 @@
         $_SESSION['username'] = $user['username'];
         $_SESSION['fullname'] = $user['fullName'];
         $_SESSION['age'] = $user['age'];
+        $_SESSION['city'] = $user['city'];
+        $_SESSION['bio'] = $user['bioInfo'];
 
         header("LOCATION: ../profilePage.php");
 

@@ -37,10 +37,16 @@
             if(!isset($_SESSION)) { 
                 session_start();
             };
-    
+            
+            $sql_code = "SELECT * FROM accounts WHERE username = '$username' AND password = '$password'";
+            $sql_query = $mysqli->query($sql_code) OR die("Falha na execução da query" . $mysqli->error);
+            $user = $sql_query->fetch_assoc();
+
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['fullname'] = $_POST['fullname'];
             $_SESSION['age'] = $_POST['age'];
+            $_SESSION['city'] = $user['city'];
+            $_SESSION['bio'] = $user['bioInfo'];
     
             header("LOCATION: ../profilePage.php");
         } else {
