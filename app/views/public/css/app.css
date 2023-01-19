@@ -1,0 +1,81 @@
+html, body
+{
+    height: 100%;
+    background: rgb(36, 35, 35);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#formLogin
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+label {
+    font-size: 1.5rem;
+    font-family: monospace;
+    margin-bottom: .3rem;
+    margin-top: .5rem;
+    color: rgb(255, 255, 255);
+}
+input
+{
+    width: 600px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 14px;
+    outline: none;
+}
+button
+{
+    width: 600px;
+    height: 50px;
+    font-size: 14px;
+    background: #069;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    color: 3fff;
+    margin-top: 10px;
+    border: none;
+    color: #fefefe;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 2px;
+}
+button:hover {
+    background: rgb(3, 146, 218);
+}
+@media screen and (max-width: 990px)
+{
+    input,
+    button,
+    .messages
+    {
+        width: 90%;
+    }
+
+    input,
+    button
+    {
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .messages
+    {
+        height: 60%;
+    }
+}
+
+.container_enterAccount  {
+    display: flex;
+}
